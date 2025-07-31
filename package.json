@@ -12,6 +12,7 @@
   "dependencies": {
     "@emotion/babel-plugin": "^11.13.5",
     "@emotion/babel-preset-css-prop": "^11.12.0",
+    "gsap": "^3.13.0",
     "path": "^0.12.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -21,6 +22,8 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@eslint/js": "^8.x.x",
+    "@tailwindcss/postcss": "^4.1.11",
+    "@tailwindcss/vite": "^4.1.11",
     "@types/node": "^24.1.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
@@ -30,8 +33,22 @@
     "eslint-plugin-react-hooks": "^4.x.x",
     "eslint-plugin-react-refresh": "^0.4.3",
     "globals": "^15.x.x",
+    "tailwindcss": "^4.1.11",
     "typescript": "~5.2.2",
     "typescript-eslint": "^7.x.x",
-    "vite": "^4.4.5"
-  }
+    "vite": "^7.0.6"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanguKang/gsap_ani_responsive.git"
+  },
+  "author": "hanguKang <rkdgksrn@hanmail.net>",
+  "license": "MIT",
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/hanguKang/gsap_ani_responsive/issues"
+  },
+  "homepage": "https://github.com/hanguKang/gsap_ani_responsive#readme"
 }
