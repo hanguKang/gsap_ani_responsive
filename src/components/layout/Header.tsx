@@ -2,6 +2,8 @@ import { css, useTheme } from '@emotion/react';
 import { HeaderProps, NavigationItem } from '@/types';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Button from '../common/Button';
+import Icon from '../common/Icon';
 
 
 
@@ -98,6 +100,10 @@ const Header: React.FC<HeaderProps> = ({ navigationItems }) => {
         }
     }`;
 
+    const handleMenu = ()=>{
+        alert('메뉴열림~!!');
+    }
+
     return (
         <>
         <div className="top" css={headerStyle}>
@@ -190,6 +196,9 @@ const Header: React.FC<HeaderProps> = ({ navigationItems }) => {
                             ))}
                         </ul>
                     </nav>
+                    <Button label="햄버거메뉴" size="small" variant="primary" onClick={handleMenu}>
+                        <Icon id="nav" type="menu" size="small" label="햄버거 메뉴" isActive={true}></Icon>
+                    </Button>
                 </header>
             </div>
         </div>

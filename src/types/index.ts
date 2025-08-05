@@ -9,3 +9,16 @@ export interface NavigationItem {
 export interface HeaderProps {
   navigationItems: NavigationItem[];
 }
+
+export interface MainContentProps {
+  title: string;
+  children: React.ReactNode;
+}
+
+export interface ContensProps extends MainContentProps{
+
+}
+
+export interface FooterProps {
+  title: string
+}
