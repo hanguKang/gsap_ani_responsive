@@ -56,9 +56,9 @@ const EnterpriseLayout: React.FC<EnterpriseLayoutProps> = ({ children }) => {
 
 // 내비게이션 아이템 데이터
   const navItems: NavigationItem[] = [
-    { id: '1', label: 'HOME', href: '/' },
-    { id: '2', label: 'ABOUT US', href: '/about' },
-    { id: '3', label: 'PAGES', href: '/pages', children:[
+    { id: '1', label: 'HOME', href: '/', routeType:'main' },
+    { id: '2', label: 'ABOUT US', href: '/about', routeType:'pageOne' },
+    { id: '3', label: 'PAGES', href: '/pages', routeType:'pageTwo' , children:[
       {id:'3-1', label: 'PAGES children1', href:'/pages/page1'},
       {id:'3-2', label: 'PAGES children2', href:'/pages/page2'},
       {id:'3-3', label: 'PAGES children3', href:'/pages/page3'},

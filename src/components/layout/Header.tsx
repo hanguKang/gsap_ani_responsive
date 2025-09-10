@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Button from '../common/Button';
 import Icon from '../common/Icon';
+import { useRouteStore, Route } from '@/store/routeStore';
 
 
 
@@ -104,6 +105,12 @@ const Header: React.FC<HeaderProps> = ({ navigationItems }) => {
         alert('메뉴열림~!!');
     }
 
+    const setPage = useRouteStore((state)=> state.setPage)
+    const handleNavClick = (routeType?:string) => {
+        if(routeType){
+            setPage(routeType as Route);
+        }
+    }
     return (
         <>
         <div className="top" css={headerStyle}>
@@ -178,7 +185,7 @@ const Header: React.FC<HeaderProps> = ({ navigationItems }) => {
                             <li className="depth1"><a href="#area8">CONTACT US</a></li> */}
                             {navigationItems.map((depth1Item:NavigationItem) => (
                                 <li key={depth1Item.id} className="depth1">
-                                <a href={depth1Item.href || '#none'}>{depth1Item.label}</a>
+                                <a href={depth1Item.href || '#none'} onClick={(e)=>{e.preventDefault(); handleNavClick(depth1Item?.routeType);}}>{depth1Item.label}</a>
                                 {depth1Item.children && depth1Item.children.length > 0 && (
                                     <div className="depth2_outer" css={gnbBox_outer}>
                                     <div className="depth2_wrapper">
