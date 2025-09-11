@@ -105,7 +105,7 @@ const Header: React.FC<HeaderProps> = ({ navigationItems }) => {
         alert('메뉴열림~!!');
     }
 
-    const setPage = useRouteStore((state)=> state.setPage)
+    const setPage = useRouteStore((state) => state.setPage )
     const handleNavClick = (routeType?:string) => {
         if(routeType){
             setPage(routeType as Route);

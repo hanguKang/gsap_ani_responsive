@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Backdrop.css';
 
-const backdrop = (props:{show:boolean}) => {
+const BackDrop = (props:{show:boolean}) => {
   const cssClass = [
     'Backdrop',
     props.show ? 'BackdropOpen' : 'BackdropClosed',
@@ -10,4 +10,4 @@ const backdrop = (props:{show:boolean}) => {
   return <div className={cssClass.join(' ')}></div>;
 };
 
-export default backdrop;
+export default BackDrop;

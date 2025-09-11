@@ -16,8 +16,9 @@ export interface MainContentProps {
   children: React.ReactNode;
 }
 
-export interface ContensProps extends MainContentProps{
-
+export interface ContentsProps extends MainContentProps{
+  title: string;
+  children: React.ReactNode;
 }
 
 export interface FooterProps {

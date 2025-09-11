@@ -8,7 +8,7 @@ const animationTiming = {
 };
 
 export const Modal = (prop:{show:boolean, isClose:()=>void})=>{
-    
+    return (
         <Transition in={prop.show} timeout={animationTiming} mountOnEnter unmountOnExit>
             {(state:  TransitionStatus )=>{
                 const classNames = ['Modal', state === 'entering'?'ModalOpen': state === 'exiting'?'ModalClosed': null]
@@ -18,5 +18,5 @@ export const Modal = (prop:{show:boolean, isClose:()=>void})=>{
                 </div>)
             }}
         </Transition>
-    
+    )
 }
